@@ -33,7 +33,7 @@
 #define EFIAPI __cdecl
 
 //
-// UEFI datatypes
+// UEFI data types
 //
 typedef unsigned char BOOLEAN;
 constexpr BOOLEAN FALSE = 0;

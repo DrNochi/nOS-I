@@ -284,9 +284,9 @@ typedef EFI_STATUS(EFIAPI *EFI_CALCULATE_CRC32)(
     IN UINTN DataSize,
     OUT UINT32 *Crc32);
 
-// 
+//
 // UEFI boot services table
-// 
+//
 typedef struct EFI_BOOT_SERVICES
 {
     EFI_TABLE_HEADER Hdr;
