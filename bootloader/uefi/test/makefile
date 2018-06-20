@@ -1,4 +1,7 @@
-build: bin/main.efi
+build: init bin/main.efi
+
+init:
+	mkdir -p bin/intermediate/
 
 bin/intermediate/main.o: src/main.c
 	clang -c -m64 -fpie -fno-exceptions -fno-rtti -I ../include -D "EFIAPI=__attribute__((ms_abi))" $^ -o $@
