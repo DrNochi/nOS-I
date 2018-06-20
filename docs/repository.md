@@ -185,7 +185,7 @@ The `epic/...` branches are very similar to `feature/...` branches, but are used
 
 To start development on such bigger changes an `epic/...` branch is created from `develop`. After those big changes are done, `epic/...` is merged back into the main `develop` branch.
 
-Like `feature/...` branches `epic/...`'s may also be rebased and discarded.
+Like `feature/...` branches, `epic/...`'s may also be rebased and discarded.
 
 #### Creating, rebasing, merging & discarding ([goto](#bm-feature-instructions))
     Look at the instructions for feature/... branches
