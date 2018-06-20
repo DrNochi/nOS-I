@@ -1,6 +1,7 @@
 #pragma once
 
 #include <stdint.h> // Get fixed-width integer types
+#include <uchar.h> // Get unicode chars
 
 //
 // UEFI versions
@@ -30,14 +31,25 @@
 //
 // UEFI calling convention
 //
-#define EFIAPI __cdecl
+#ifndef EFIAPI
+    #define EFIAPI /*UEFI calling convention*/
+
+    // Avoid stupid errors of VS Code cause it's not knowing "custom" types
+    #define __int128_t
+    #define __uint128_t
+#endif
+
+//
+// UEFI constants
+//
+#define NULL 0
+#define FALSE 0
+#define TRUE 1
 
 //
 // UEFI data types
 //
 typedef unsigned char BOOLEAN;
-constexpr BOOLEAN FALSE = 0;
-constexpr BOOLEAN TRUE = 1;
 
 typedef intptr_t INTN;
 typedef uintptr_t UINTN;
@@ -54,8 +66,8 @@ typedef uint32_t UINT32;
 typedef int64_t INT64;
 typedef uint64_t UINT64;
 
-typedef int128_t INT128;
-typedef uint128_t UINT128;
+typedef __int128_t INT128;
+typedef __uint128_t UINT128;
 
 typedef char CHAR8;
 typedef char16_t CHAR16;
