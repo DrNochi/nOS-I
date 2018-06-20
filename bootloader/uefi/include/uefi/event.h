@@ -50,3 +50,7 @@ typedef enum EFI_TIMER_DELAY
     TimerPeriodic,
     TimerRelative
 } EFI_TIMER_DELAY;
+
+typedef VOID(EFIAPI *EFI_EVENT_NOTIFY)(
+    IN EFI_EVENT Event,
+    IN VOID *Context);
