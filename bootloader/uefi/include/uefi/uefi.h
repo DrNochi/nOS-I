@@ -1,6 +1,7 @@
 #pragma once
 
 #include <uefi/system-table.h>
+#include <uefi/status-codes.h>
 
 //
 // UEFI image entry point
