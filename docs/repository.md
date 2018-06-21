@@ -23,7 +23,7 @@ Additionally there are (many) minor branches:
 ---
 ### <a id="bm-master"></a> `master` - Branch
 
-The `master` branch only contains production-ready code. Therefore, it is conisdered that the `HEAD` of `origin/master` always reflects the current production-ready state.
+The `master` branch only contains production-ready code. Therefore, it is considered that the `HEAD` of `origin/master` always reflects the current production-ready state.
 
 Each time when changes are merged back into `master`, this is a new production release by definition. It should be assigned and tagged with a version number (following the semantic versioning specification), the tag message should give a short description of the release like a changelog or a link to one;\
 e.g. tag `4.7.11`: http://project.xyz/changelogs/v4.7.11/
@@ -159,7 +159,7 @@ $ git cherry-pick <FIX-COMMIT>
 >
 > __Naming convention:__ `junk/`*`<NAME>`*
 
-`junk/...` branches are used for (random) experiments, prooves of concept, etc. They may branch off of every other branch, but may never be merged back into any branch (except maybe other `junk/...` branches).
+`junk/...` branches are used for (random) experiments, proofs of concept, etc. They may branch off of every other branch, but may never be merged back into any branch (except maybe other `junk/...` branches).
 
 If it is expected that the changes that are made in this branch will be merged back into another branch eventually, consider using another branch type like:
 - `feature/...`
@@ -169,7 +169,7 @@ If it is expected that the changes that are made in this branch will be merged b
 ```
 $ git checkout <SOME-BRANCH>
 $ git branch junk/<NAME>
-$ git checkout test/<NAME>
+$ git checkout junk/<NAME>
 ```
 
 ---
@@ -181,7 +181,7 @@ $ git checkout test/<NAME>
 >
 > __Naming convention:__ `epic/`*`<EPIC-NAME>`*
 
-The `epic/...` branches are very similar to `feature/...` branches, but are used to encapsulate not only single features but bigger changes. Code may be made directly in the `epic/...` branch or grouped into sub-features, bugfixes, etc.. In this case, `feature/...` and `bugfix/...` branches branching off of this `epic/...` branch are used to build that structure (the `epic/...` branch is then acting like the main `develop` branch for those sub-branches).
+The `epic/...` branches are very similar to `feature/...` branches, but are used to encapsulate not only single features but bigger changes. Code changes may be made directly in the `epic/...` branch or grouped into sub-features, bugfixes, etc.. In this case, `feature/...` and `bugfix/...` branches branching off of this `epic/...` branch are used to build that structure (the `epic/...` branch is then acting like the main `develop` branch for those sub-branches).
 
 To start development on such bigger changes an `epic/...` branch is created from `develop`. After those big changes are done, `epic/...` is merged back into the main `develop` branch.
 
