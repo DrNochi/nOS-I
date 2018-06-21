@@ -116,7 +116,7 @@ The `bugfix/...` branches are like `feature/...` branches, but they are used for
 >
 > __Naming convention:__ `test/`*`<WHAT-GETS-TESTED>`*
 
-> Tests which do not require any additional infrastructure should be conducted in its own development branch (`feature/...`, etc.).
+> Tests which do not require any additional infrastructure should be conducted in its related development branch (`feature/...`, etc.).
 
 The `test/...` branches are used to test new features, bugfixes or even bigger changes if they require a specific test infrastructure. In these cases, the `test/...` branches may be used to setup the test environment and it may even be used to fix bugs that surface during the test. They are branched off the branch specifc to the changes that will be tested, but it is never merged back, because the test infrastructure may not be included in the main code base. Instead, successful bugfix commits done in a `test/...` branch are cherry-picked into the respective development branch (`feature/...`, etc.).
 
